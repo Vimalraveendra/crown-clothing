@@ -2,10 +2,11 @@ import React from 'react';
 import './Menu-Item.scss';
 
 const MenuItem= ({ title,imageUrl,linkUrl,size})=>{
+
     return(
         <div 
         style={{
-            background:`url(${imageUrl})`
+            backgroundImage:`url( ${imageUrl} )`
         }}
         className={`menu-item ${size || ''} `}>
                   <div className="content">
