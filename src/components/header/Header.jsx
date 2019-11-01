@@ -4,7 +4,6 @@ import "./Header.scss";
 import { ReactComponent as Logo } from "../../assests/crown.svg";
 import { auth } from "../../firebase/Firebase.Utils";
 const Header = ({ currentUser }) => {
-  console.log("Header", currentUser);
   return (
     <div className="header">
       <Link className="logo-container" to="/">
