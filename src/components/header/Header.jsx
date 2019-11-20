@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import "./Header.scss";
+import CartIcon from "../cart-icon/Cart-Icon";
 import { ReactComponent as Logo } from "../../assests/crown.svg";
 import { auth } from "../../firebase/Firebase.Utils";
 
@@ -28,6 +29,7 @@ const Header = ({ currentUser }) => {
             Sign In
           </Link>
         )}
+        <CartIcon />
       </div>
     </div>
   );
