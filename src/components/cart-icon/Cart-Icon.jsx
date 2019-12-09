@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import { toggleCartHidden } from "../../redux/cart/cart.actions";
 import { selectCartItemsCount } from "../../redux/cart/cart.selector";
 import { createStructuredSelector } from "reselect";
+
 const CartIcon = ({ toggleCartHidden, cartCount }) => {
   return (
     <div className="cart-icon">
