@@ -3,7 +3,7 @@ import "./App.css";
 import { Switch, Route, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 
-import Homepage from "./pages/Homepage/Homepage";
+import Homepage from "./pages/homepage/Homepage";
 import ShopPage from "./pages/Shoppage/ShopPage";
 import Header from "./components/header/Header";
 import SignInAndSignUpPage from "./pages/signin-and-signup/SignIn-and-SignUp";
