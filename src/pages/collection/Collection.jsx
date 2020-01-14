@@ -3,6 +3,7 @@ import "./Collection.scss";
 import { connect } from "react-redux";
 import { selectCollection } from "../../redux/shop/shop.selector";
 import CollectionItem from "../../components/collection-items/Collection-Items";
+
 const CollectionPage = ({ collection }) => {
   const { title, items } = collection;
   return (
