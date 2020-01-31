@@ -1,6 +1,7 @@
 import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";
+
 const API_KEY = process.env.REACT_APP_API_KEY;
 const API_ID = process.env.REACT_APP_API_ID;
 const config = {
@@ -50,6 +51,15 @@ export const convertCollectionsSnapshotToMap = collections => {
     accumulator[collection.title.toLowerCase()] = collection;
     return accumulator;
   }, {});
+};
+
+export const getCurrentUser = () => {
+  return new Promise((resolve, reject) => {
+    const unsubscribe = auth.onAuthStateChanged(userAuth => {
+      unsubscribe();
+      resolve(userAuth);
+    }, reject);
+  });
 };
 
 export const addCollectionAndDocuments = async (
