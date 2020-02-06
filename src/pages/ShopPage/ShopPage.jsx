@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import CollectionOverviewContainer from "../../components/collection-overview/Collection-Overview.container";
 import { Route } from "react-router-dom";
 import CollectionContainer from "../collection/Collection.container";
@@ -8,30 +8,31 @@ import { createStructuredSelector } from "reselect";
 import { isCollectionLoaded } from "../../redux/shop/shop.selector";
 import { connect } from "react-redux";
 
-class ShopPage extends React.Component {
-  componentDidMount() {
-    const { fetchCollectionsStart } = this.props;
+const ShopPage = ({ fetchCollectionsStart, match }) => {
+  useEffect(() => {
     fetchCollectionsStart();
-  }
+  }, [fetchCollectionsStart]);
 
-  render() {
-    const { match } = this.props;
-    return (
-      <div>
-        <Route
-          exact
-          path={`${match.path}`}
-          component={CollectionOverviewContainer}
-        />
-        <Route
-          exact
-          path={`${match.path}/:collectionId`}
-          component={CollectionContainer}
-        />
-      </div>
-    );
-  }
-}
+  // componentDidMount() {
+  //   const { fetchCollectionsStart } = this.props;
+  //   fetchCollectionsStart();
+  // }
+
+  return (
+    <div>
+      <Route
+        exact
+        path={`${match.path}`}
+        component={CollectionOverviewContainer}
+      />
+      <Route
+        exact
+        path={`${match.path}/:collectionId`}
+        component={CollectionContainer}
+      />
+    </div>
+  );
+};
 
 const mapStateToProps = createStructuredSelector({
   isCollectionLoaded: isCollectionLoaded
