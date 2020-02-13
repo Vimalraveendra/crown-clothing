@@ -2,16 +2,17 @@ import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";
 
-const API_KEY = process.env.REACT_APP_API_KEY;
-const API_ID = process.env.REACT_APP_API_ID;
+// const API_KEY = process.env.REACT_APP_API_KEY;
+// const API_ID = process.env.REACT_APP_API_ID;
+
 const config = {
-  apiKey: API_KEY,
+  apiKey: "AIzaSyBnNxMVQgn9XfBK_ML12KR5owIqFaHiT4k",
   authDomain: "crown-db-b5c9d.firebaseapp.com",
   databaseURL: "https://crown-db-b5c9d.firebaseio.com",
   projectId: "crown-db-b5c9d",
   storageBucket: "crown-db-b5c9d.appspot.com",
   messagingSenderId: "698868360577",
-  appId: API_ID,
+  appId: "11:698868360577:web:678993686b337f8fd2b480",
   measurementId: "G-2YSKT3NM2V"
 };
 
